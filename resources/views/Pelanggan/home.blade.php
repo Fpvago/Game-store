@@ -1,0 +1,75 @@
+@extends('Layout.main')
+@section('title')
+    Home
+@endsection
+@section('content')
+<section class="hero"> 
+<main class="content">
+    <h1>Find varieties of games at a reasonable price here in Game Store</h1>
+    <p>Soulsborne, Open world, Survival, everything is here</p>
+    <a href="/product" class="btn">Buy Now</a>
+</main>
+</section>
+
+<section class="About container">
+    <h2 class= "text-start mt-5 fw-bold">About Us</h2>
+    <div class="row mt-3">
+        <div class="col-md-6"> 
+            <img src="{{ asset ('images/logo.png')}}" alt="" width="100%">
+        </div>
+        <div class="col-md-6">
+            <p>Game is a promotionally driven discount retailer of predominantly general merchandise and non-perishable groceries for home, leisure and business use.
+Game is a subsidiary of the JSE listed, Massmart Holdings. Game store third largest distributor of consumer goods, the leading retailer of general merchandise, liquor and home improvement equipment and supplies, and the leading wholesaler of basic foods.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="best product py-3 mt-4 bg-primary">
+    <div class="container">
+    <h2 class="text-center fw-bold">Best Product</h2>
+<div class="row">
+    <div class="col-md-3">
+    <div class="card" >
+  <img src="{{ asset ('images/Soulsborne.png')}}" class="card-img-top" alt="..."  >
+  <div class="card-body">
+    <h5 class="card-title">Soulsborne package</h5>
+    <p class="fw-bold fs-5 text-success">Rp.1.290.000</p>
+    <a href="#" class="btn btn-dark text-white">View Product</a>
+  </div>
+</div>
+</div>
+    <div class="col-md-3">
+    <div class="card" >
+  <img src="{{ asset ('images/Tsushima.png')}}" class="card-img-top" alt="..."  >
+  <div class="card-body">
+    <h5 class="card-title">Ghost of tsushima: Director's cut</h5>
+    <p class="fw-bold fs-5 text-success">Rp.899.999</p>
+    <a href="#" class="btn btn-dark text-white">View Product</a>
+  </div>
+</div>
+</div>
+    <div class="col-md-3">
+    <div class="card" >
+  <img src="{{ asset ('images/Smash.png')}}" class="card-img-top" alt="..."  >
+  <div class="card-body">
+    <h5 class="card-title">Super Smash Bros</h5>
+    <p class="fw-bold fs-5 text-success">Rp.540.000</p>
+    <a href="#" class="btn btn-dark text-white">View Product</a>
+  </div>
+</div>
+</div>
+    <div class="col-md-3">
+    <div class="card" >
+  <img src="{{ asset ('images/Helldivers2.png')}}" class="card-img-top" alt="..."  >
+  <div class="card-body">
+    <h5 class="card-title">Helldivers II</h5>
+    <p class="fw-bold fs-5 text-success">Rp.434.000</p>
+    <a href="#" class="btn btn-dark text-white">View Product</a>
+  </div>
+</div>
+</div>
+    </div>
+    </div>
+</section>
+@endsection
