@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class Admincontroller extends Controller
@@ -33,7 +34,7 @@ class Admincontroller extends Controller
             [
                 'nama_admin'=>'required',
                 'jk_admin'=>'required',
-                'nohp_admin'=>'required',
+                'nohp_admin'=>'required|numeric',
                 'email_admin'=>'required|unique:admins',
                 'password_admin'=>'required',
                 'alamat_admin'=>'required',
@@ -57,16 +58,17 @@ class Admincontroller extends Controller
             ]
         );
         
-        $path = $request->file('foto')->store('public/images');
+        $path = $request->file('foto_admin')->store('public/uploads');
 
         $admin = new Admin();
         $admin ->nama_admin = $request['nama_admin'];
         $admin ->jk_admin = $request['jk_admin'];
         $admin ->nohp_admin = $request['nohp_admin'];
-        $admin ->email = $request['email_admin'];
-        $admin ->password = Hash::make ($request['password_admin']);
+        $admin ->email_admin = $request['email_admin'];
+        $admin ->password_admin = Hash::make($request['password_admin']);
         $admin ->alamat_admin = $request['alamat_admin'];
-        $admin ->foto = basename($path);
+        $admin ->foto_admin = basename($path);
+        $admin ->jabatan_admin = $request['jabatan_admin'];
         $admin ->save();
         
         return redirect('/admin');
