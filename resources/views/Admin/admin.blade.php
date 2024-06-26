@@ -49,14 +49,14 @@
       <td>{{ $item->alamat_admin }}</td>
       <td>{{ $item->jabatan_admin }}</td>
       <td>
-      <a class="btn btn-success" href="/detailkaryawan/{{$item->id}}" role="button">Details</a>
+      <a class="btn btn-success" href="/detailadmin/{{$item->id}}" role="button">Details</a>
       </td>
       <td>
-      <a class="btn btn-success" href="/editkaryawan/{{$item->id}}" role="button">Edit</a>
+      <a class="btn btn-success" href="/editadmin/{{$item->id}}" role="button">Edit</a>
       </td>
 
       <td>
-      <a class="btn btn-success" href="/deletekaryawan/{{$item->id}}" role="button">Delete</a>
+      <a class="btn btn-success" href="/deleteadmin/{{$item->id}}" role="button">Delete</a>
       </td>
     </tr>
     @endforeach
