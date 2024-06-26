@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('nama_admin');
-            $table->enum('jk_admin', ['L', 'P']);
+            $table->enum('jk_admin', ['Laki-laki', 'Perempuan']);
             $table->string('nohp_admin', length: 15);
             $table->string('email_admin')-> unique();
             $table->string('password_admin');

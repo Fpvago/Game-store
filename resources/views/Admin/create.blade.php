@@ -31,8 +31,8 @@
       <label for="jkadm" class="form-label">Jenis Kelamin</label>
       <select name="jk_admin" id="jkadm" class="form-select">
       <option value="">--pilih Jenis Kelamin--</option>
-<option value="L">Laki-Laki</option>
-<option value="P">Perempuan</option>
+<option value="Laki-laki">L</option>
+<option value="Perempuan">P</option>
       </select>
       @error('jk_admin')
     <div class= "text-danger">
