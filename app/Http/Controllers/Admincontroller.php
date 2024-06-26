@@ -137,6 +137,7 @@ class Admincontroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Admin::destroy('id', $id);
+        return redirect('/admin');
     }
 }

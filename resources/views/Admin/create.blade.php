@@ -50,7 +50,7 @@
     </div>
   @enderror
     </div>
-    
+
     <div class="mb-3">
       <label for="emailadm" class="form-label">Email Admin</label>
       <input type="email" value="{{old('email_admin')}}" name="email_admin" id="emailadm" class="form-control" placeholder="Email Admin">
@@ -90,7 +90,7 @@
     </div>
   @enderror
     </div>
-    
+
     <div class="mb-3">
       <label for="ftadm" class="form-label">Foto Admin</label>
       <input type="file" value="{{old('foto_admin')}}" name="foto_admin" id="ftadm" class="form-control">
