@@ -34,7 +34,7 @@ class ProductController extends Controller
     {
         $request->validate(
             [
-                'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:2048',
+                'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:3072',
                 'gamesadmin'=>'required',
                 'price'=>'required',
                 'stock'=>'required',
@@ -46,7 +46,7 @@ class ProductController extends Controller
                 'fotogamesadmin.required' => 'Foto wajib diisi',
                 'fotogamesadmin.mimes' => 'Foto wajib dalam format jpg,png,gif,jpeg',
                 'fotogamesadmin.image' => 'Foto wajib diisi',
-                'fotogamesadmin.max' => 'Foto hanya mencapai 2mb',
+                'fotogamesadmin.max' => 'Foto hanya mencapai 3mb',
                 'price.required' => 'Harga wajib diisi ',
                 'stock.required' => 'Number of stock wajib diisi',
                 'supplier.required' => 'Status wajib diisi',
@@ -92,7 +92,7 @@ class ProductController extends Controller
     {
         $request->validate(
             [
-                'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:2048',
+                'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:3072',
                 'gamesadmin'=>'required',
                 'price'=>'required',
                 'stock'=>'required',
@@ -111,7 +111,7 @@ class ProductController extends Controller
             $path = $request->fotogamesadm;
         }
 
-        $games = new Product();
+        $games = Product::find($id);
         $games ->fotogamesadmin = basename($path);
         $games ->gamesadmin = $request['gamesadmin'];
         $games ->price = $request['price'];
@@ -128,6 +128,7 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Product::destroy('id', $id);
+        return redirect('/product');
     }
 }

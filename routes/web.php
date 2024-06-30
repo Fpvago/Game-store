@@ -22,3 +22,4 @@ Route::get('/creategames',[ProductController::class,'create']);
 Route::post('/savegames',[ProductController::class,'store']);
 Route::get('/editgames/{id}',[ProductController::class,'edit']);
 Route::put('/updategames/{id}',[ProductController::class,'update']);
+Route::get('/deletegames/{id}',[ProductController::class,'destroy']);

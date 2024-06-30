@@ -21,7 +21,7 @@ GamesPage
     <div class="mb-3">
       <label for="ftgmsadm" class="form-label">Foto Games</label>
       <input type="hidden" name="fotogamesadm" value="{{$games->fotogamesadmin}}">
-        <input type="file" name="fotogamesadmin" id="ftadm" class="from-control" accept="*/uploads">
+        <input type="file" name="fotogamesadmin" id="ftgmsadm" class="from-control" accept="*/uploads">
     </div>
 
     <div class="mb-3">

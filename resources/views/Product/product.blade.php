@@ -37,7 +37,7 @@
     @foreach ($games as $item)
 <tr>
 <th scope="row">{{$loop->iteration}}</th>
-<td><img src="{{asset ('storage/photo/' . $item->fotogamesadmin) }}" alt="" width="175"> </td>
+<td><img src="{{asset ('storage/uploads/' . $item->fotogamesadmin) }}" alt="" width="175"> </td>
 <td>{{ $item->gamesadmin}}</td>
 <td>{{ $item->price}}</td>
 <td>{{ $item->stock}}</td>

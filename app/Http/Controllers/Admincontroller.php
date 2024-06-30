@@ -39,7 +39,7 @@ class Admincontroller extends Controller
                 'email_admin'=>'required|unique:admins',
                 'password_admin'=>'required',
                 'alamat_admin'=>'required',
-                'foto_admin'=>'required|mimes:jpg,png,gif,jpeg|image|max:2048',
+                'foto_admin'=>'required|mimes:jpg,png,gif,jpeg|image|max:3072',
                 'jabatan_admin'=>'required',
             ],
 
@@ -54,7 +54,7 @@ class Admincontroller extends Controller
                 'foto_admin.required' => 'Foto wajib diisi',
                 'foto_admin.mimes' => 'Foto wajib dalam format jpg,png,gif,jpeg',
                 'foto_admin.image' => 'Foto wajib diisi',
-                'foto_admin.max' => 'Foto hanya mencapai 2mb',
+                'foto_admin.max' => 'Foto hanya mencapai 3mb',
                 'jabatan_admin.required' => 'Jabatan wajib diisi',
             ]
         );
@@ -104,7 +104,7 @@ class Admincontroller extends Controller
                 'nohp_admin'=>'required|numeric',
                 'email_admin'=>'required',
                 'alamat_admin'=>'required',
-                'foto_admin'=>'mimes:jpg,png,gif,jpeg|image|max:3048',
+                'foto_admin'=>'mimes:jpg,png,gif,jpeg|image|max:3072',
                 'jabatan_admin'=>'required',
             ]
         );
