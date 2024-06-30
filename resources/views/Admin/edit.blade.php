@@ -47,14 +47,8 @@
     </div>
 
     <div class="mb-3">
-      <label for="passadm" class="form-label">Password Admin</label>
-      <input type="password" value="{{$admin->password_admin}}" name="password_admin" id="passadm" class="form-control" placeholder="Password Admin">
-
-    </div>
-
-    <div class="mb-3">
       <label for="alamadm" class="form-label">Alamat Admin</label>
-      <textarea type="text" value="{{$admin->alamat_admin}}" name="alamat_admin" id="alamadm" class="form-control" placeholder="Alamat Admin"> </textarea>
+      <textarea type="text" name="alamat_admin" id="alamadm" class="form-control" placeholder="Alamat Admin">{{$admin->alamat_admin}}</textarea>
 
     </div>
 
@@ -66,8 +60,8 @@
 
     <div class="mb-3">
       <label for="ftadm" class="form-label">Foto Admin</label>
-      <input type="file" value="{{$admin->foto_admin}}" name="foto_admin" id="ftadm" class="form-control">
-
+      <input type="hidden" name="fotolama" value="{{$admin->foto_admin}}">
+        <input type="file" name="foto_admin" id="ftadm" class="from-control" accept="*/uploads">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

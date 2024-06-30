@@ -73,7 +73,7 @@
 
     <div class="mb-3">
       <label for="alamadm" class="form-label">Alamat Admin</label>
-      <textarea type="text" value="{{old('alamat_admin')}}" name="alamat_admin" id="alamadm" class="form-control" placeholder="Alamat Admin"> </textarea>
+      <textarea type="text" name="alamat_admin" id="alamadm" class="form-control" placeholder="Alamat Admin">{{old('alamat_admin')}}</textarea>
       @error('alamat_admin')
     <div class= "text-danger">
       {{$message}}
