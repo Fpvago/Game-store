@@ -92,7 +92,7 @@ class ProductController extends Controller
     {
         $request->validate(
             [
-                'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:3072',
+                'fotogamesadmin'=>'mimes:jpg,png,gif,jpeg|image|max:3072',
                 'gamesadmin'=>'required',
                 'price'=>'required',
                 'stock'=>'required',

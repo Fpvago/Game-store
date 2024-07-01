@@ -21,31 +21,52 @@ GamesPage
     <div class="mb-3">
       <label for="ftgmsadm" class="form-label">Foto Games</label>
       <input type="hidden" name="fotogamesadm" value="{{$games->fotogamesadmin}}">
-        <input type="file" name="fotogamesadmin" id="ftgmsadm" class="from-control" accept="*/uploads">
+        <input type="file" name="fotogamesadmin" id="ftgmsadm" class="form-control" accept="*/uploads">
+        @error('fotogamesadmin')
+    <div class= "text-danger">
+        {{$message}}
+    </div>
+    @enderror
     </div>
 
     <div class="mb-3">
       <label for="gmsadm" class="form-label">Games</label>
       <input type="text" value="{{$games->gamesadmin}}" name="gamesadmin" id="gmsadm" class="form-control" placeholder="Games Name">
-
+      @error('gamesadmin')
+      <div class= "text-danger">
+          {{$message}}
+      </div>
+      @enderror
     </div>
 
     <div class="mb-3">
       <label for="priceadm" class="form-label">Price</label>
       <input type="text" value="{{$games->price}}" name="price" id="priceadm" class="form-control" placeholder="Price Game">
-
+      @error('price')
+      <div class= "text-danger">
+          {{$message}}
+      </div>
+      @enderror
     </div>
 
     <div class="mb-3">
       <label for="stkadm" class="form-label">Stock</label>
-      <input type="integer" value="{{$games->stock}}" name="stock" id="stkadm" class="form-control" placeholder="Stock Game">
-
+      <input type="text" value="{{$games->stock}}" name="stock" id="stkadm" class="form-control" placeholder="Stock Game">
+      @error('stock')
+      <div class= "text-danger">
+          {{$message}}
+      </div>
+      @enderror
     </div>
 
     <div class="mb-3">
       <label for="splradm" class="form-label">Supplier</label>
       <input type="text" value="{{$games->supplier}}" name="supplier" id="splradm" class="form-control" placeholder="Supplier Games">
-
+      @error('supplier')
+      <div class= "text-danger">
+          {{$message}}
+      </div>
+      @enderror
     </div>
 
     <div class="mb-3">
@@ -55,7 +76,11 @@ GamesPage
   <option value="Best Product">Best Product</option>
   <option value="non-Best Product">non-Best Product</option>
         </select>
-
+        @error('status')
+    <div class= "text-danger">
+        {{$message}}
+    </div>
+    @enderror
       </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
