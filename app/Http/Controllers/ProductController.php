@@ -14,9 +14,9 @@ class ProductController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $games = Product::all();
+    {$games = Product::all();
         return view('Product.product',  compact('games'));
+
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductController extends Controller
             [
                 'fotogamesadmin'=>'required|mimes:jpg,png,gif,jpeg|image|max:3072',
                 'gamesadmin'=>'required',
-                'price'=>'required',
+                'price'=>'required|integer',
                 'stock'=>'required',
                 'supplier'=>'required',
                 'status'=>'required',
@@ -94,7 +94,7 @@ class ProductController extends Controller
             [
                 'fotogamesadmin'=>'mimes:jpg,png,gif,jpeg|image|max:3072',
                 'gamesadmin'=>'required',
-                'price'=>'required',
+                'price'=>'required|integer',
                 'stock'=>'required',
                 'supplier'=>'required',
                 'status'=>'required',

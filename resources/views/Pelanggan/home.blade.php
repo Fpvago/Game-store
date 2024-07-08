@@ -3,7 +3,7 @@
     Home
 @endsection
 @section('content')
-<section class="hero"> 
+<section class="hero">
 <main class="content">
     <h1>Find varieties of games at a reasonable price here in Game Store</h1>
     <p>Soulsborne, Open world, Survival, everything is here</p>
@@ -14,7 +14,7 @@
 <section class="About container">
     <h2 class= "text-start mt-5 fw-bold">About Us</h2>
     <div class="row mt-3">
-        <div class="col-md-6"> 
+        <div class="col-md-6">
             <img src="{{ asset ('images/logo.png')}}" alt="" width="100%">
         </div>
         <div class="col-md-6">
@@ -29,46 +29,18 @@ Game is a subsidiary of the JSE listed, Massmart Holdings. Game store third larg
     <div class="container">
     <h2 class="text-center fw-bold">Best Product</h2>
 <div class="row">
+    @foreach ($games as $item)
     <div class="col-md-3">
     <div class="card" >
-  <img src="{{ asset ('images/Soulsborne.png')}}" class="card-img-top" alt="..."  >
+  <img src="{{asset ('storage/uploads/' . $item->fotogamesadmin) }}" class="card-img-top" alt="..."  >
   <div class="card-body">
-    <h5 class="card-title">Soulsborne package</h5>
-    <p class="fw-bold fs-5 text-success">Rp.1.290.000</p>
+    <h5 class="card-title">{{ $item->gamesadmin}}</h5>
+    <p class="fw-bold fs-5 text-success">{{ $item->price}}</p>
     <a href="#" class="btn btn-dark text-white">View Product</a>
   </div>
 </div>
 </div>
-    <div class="col-md-3">
-    <div class="card" >
-  <img src="{{ asset ('images/Tsushima.png')}}" class="card-img-top" alt="..."  >
-  <div class="card-body">
-    <h5 class="card-title">Ghost of tsushima: Director's cut</h5>
-    <p class="fw-bold fs-5 text-success">Rp.899.999</p>
-    <a href="#" class="btn btn-dark text-white">View Product</a>
-  </div>
-</div>
-</div>
-    <div class="col-md-3">
-    <div class="card" >
-  <img src="{{ asset ('images/Smash.png')}}" class="card-img-top" alt="..."  >
-  <div class="card-body">
-    <h5 class="card-title">Super Smash Bros</h5>
-    <p class="fw-bold fs-5 text-success">Rp.540.000</p>
-    <a href="#" class="btn btn-dark text-white">View Product</a>
-  </div>
-</div>
-</div>
-    <div class="col-md-3">
-    <div class="card" >
-  <img src="{{ asset ('images/Helldivers2.png')}}" class="card-img-top" alt="..."  >
-  <div class="card-body">
-    <h5 class="card-title">Helldivers II</h5>
-    <p class="fw-bold fs-5 text-success">Rp.434.000</p>
-    <a href="#" class="btn btn-dark text-white">View Product</a>
-  </div>
-</div>
-</div>
+    @endforeach
     </div>
     </div>
 </section>
