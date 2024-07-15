@@ -18,7 +18,7 @@
             <img src="{{ asset ('images/logo.png')}}" alt="" width="100%">
         </div>
         <div class="col-md-6">
-            <p>Game is a promotionally driven discount retailer of predominantly general merchandise and non-perishable groceries for home, leisure and business use.
+            <p>Game Store is a promotionally driven discount retailer of predominantly general merchandise and non-perishable groceries for home, leisure and business use.
 Game is a subsidiary of the JSE listed, Massmart Holdings. Game store third largest distributor of consumer goods, the leading retailer of general merchandise, liquor and home improvement equipment and supplies, and the leading wholesaler of basic foods.</p>
         </div>
     </div>
@@ -36,7 +36,8 @@ Game is a subsidiary of the JSE listed, Massmart Holdings. Game store third larg
   <div class="card-body">
     <h5 class="card-title">{{ $item->gamesadmin}}</h5>
     <p class="fw-bold fs-5 text-success">{{ $item->price}}</p>
-    <a href="#" class="btn btn-dark text-white">View Product</a>
+    <a href="/orders/{{$item->id}}" class="btn btn-dark text-white">Add to cart</a>
+    <a href="/orders/{{$item->id}}" class="btn btn-dark text-white">View Product</a>
   </div>
 </div>
 </div>

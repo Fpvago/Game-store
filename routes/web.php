@@ -4,6 +4,7 @@ use App\Http\Controllers\Admincontroller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,3 +30,7 @@ Route::get('/deletegames/{id}',[ProductController::class,'destroy']);
 Route::get('/',[HomeController::class,'index']);
 
 Route::get('/productpelanggan',[TransaksiController::class,'index']);
+Route::get('/orders/{id}',[TransaksiController::class,'create']);
+Route::get('/ordersave',[TransaksiController::class,'store']);
+
+ Route::get('/checkout/{id}',[CheckoutController::class,'create'])->name('checkout');

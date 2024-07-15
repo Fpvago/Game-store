@@ -2,7 +2,6 @@
 @section('title')
     Admin
 @endsection
-
 @section('content')
     <h1>Admin</h1>
     <nav aria-label="breadcrumb">

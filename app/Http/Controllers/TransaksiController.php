@@ -21,9 +21,10 @@ class TransaksiController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(string $id)
     {
-        //
+        $games = Product::find($id);
+        return view('Orders.checkout',  compact('games'));
     }
 
     /**
@@ -31,8 +32,25 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate(
+    [
+        'product_id' => 'required',
+        'qty_order' => 'required',
+        'total_bayar' => 'required',
+        'status_bayar' => 'required',
+    ]
+    );
+    $orders = new Pembayaran();
+    $orders ->product_id = $request['product_id'];
+    $orders ->qty_order = $request['qty_order'];
+    $orders ->total_bayar = $request['total'];
+    $orders ->status_bayar = $request['status_bayar'];
+    $orders->save();
+
+    return redirect()->route('checkout',['id' => $orders->id]);
     }
+
+
 
     /**
      * Display the specified resource.
